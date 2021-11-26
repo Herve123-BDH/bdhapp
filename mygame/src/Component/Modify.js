@@ -38,11 +38,11 @@ export const Modify = () => {
             if(content==="" || title===""){
                 setOpe(true)
             }else{
-                axios.patch(`https://bdh.herokuapp.com/post//updatepost/${clickId}`, {title:title, content:content})
+                axios.patch(`https://bdhh.herokuapp.com/post//updatepost/${clickId}`, {title:title, content:content})
                 .then(data=>{
                     setBool(false)
                     if(data.data.modifiedCount===1){
-                        axios.get("https://bdh.herokuapp.com/post/allpost")
+                        axios.get("https://bdhh.herokuapp.com/post/allpost")
                         .then(data=>dispatch(getpost({
                         allpost: data.data})))
                         setTimeout(()=>{

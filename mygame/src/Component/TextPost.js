@@ -32,7 +32,7 @@ export const TextPost = () => {
             handleClickOpen()
         }else{
             setId("load")
-            axios.post("https://bdh.herokuapp.com/post/newpost", {title:  title, content: content})
+            axios.post("https://bdhh.herokuapp.com/post/newpost", {title:  title, content: content})
             .then(data=>{
                 if(data.data.msg._id!=="none"){
                     setOpe(true)

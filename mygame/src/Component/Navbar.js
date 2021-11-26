@@ -13,7 +13,7 @@ import {getpost} from '../feature/postSlice'
 export const Navbar = () => {
   const dispatch=useDispatch()
   const loading=()=>{
-    axios.get("https://bdh.herokuapp.com/post/allpost")
+    axios.get("https://bdhh.herokuapp.com/post/allpost")
     .then(data=>dispatch(getpost({
       allpost: data.data
     })))
