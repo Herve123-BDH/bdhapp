@@ -29,18 +29,21 @@ export const Navbar = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            
           >
             <Icon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Stories
           </Typography>
+          <div style={{display:"flex", flexWrap:"wrap"}}>
           <Link className='Link'  to='/'><Button className='btnn' color="inherit">Home</Button></Link>
           <Link className='Link' onClick={loading} to='/allpost'><Button  className='btnn' color="inherit">view post</Button></Link>
           <Link className='Link'  to='/newpost'><Button className='btnn' color="inherit">Add post</Button></Link>
           <Link className='Link' onClick={loading} to='/updatepost'><Button className='btnn' color="inherit">modify post</Button></Link>
           <Link className='Link' onClick={loading} to='/deletepost'><Button  className='btnn' color="inherit">delete post</Button></Link>
           {/* <Button className='btnn' color="inherit"><Link className='Link'  to='/deleted'>deleted post</Link></Button> */}
+          </div>
         </Toolbar>
       </AppBar>
     </Box>
