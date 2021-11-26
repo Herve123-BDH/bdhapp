@@ -1,0 +1,20 @@
+const express=require("express")
+const dotenv=require("dotenv")
+const route = require("./route/route")
+dotenv.config({path: "./config/.env"})
+const cors=require("cors")
+const PORT= process.env.PORT
+const app=express()
+const MongoDB= require("./db/db")
+const path= require('path')
+MongoDB()
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use('/post', route)
+app.use(express.static(path.join(__dirname, 'build')))
+app.get('/*', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
+
+app.listen(PORT, ()=>console.log(`server started at port ${PORT}`))

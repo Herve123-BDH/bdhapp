@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Link{
+    color: #fff;
+    text-decoration: none;
+}
+.bt{
+    width: 100px;
+    margin: 100px;
+}
+.na{
+    margin: 20px;
+}
+.btnn:hover{
+    border-bottom: 2px solid rgb(2, 233, 250);
+}
+.cardspost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.spinner{
+    margin-top: 200px;
+}
